@@ -1,0 +1,17 @@
+@media screen and (max-width: 749px) {
+  img {
+    object-fit: contain !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .thumbnail-overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #242833; /* 100% opaque with the color you specified */
+    color: white;
+    padding: 5px 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
