@@ -5,7 +5,7 @@
 This document outlines the changes made to the product thumbnails on both **desktop** and **mobile** views. The customization includes:
 
 1. **Ensuring that the product images fit within their containers without zooming in.**
-2. **Adding a text overlay at the bottom of each thumbnail.**
+2. **Adding a text overlay at the bottom of each thumbnail to display the alt text. **
 
 ## CSS Changes
 
