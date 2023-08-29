@@ -71,8 +71,6 @@ For mobile, the following styles were applied:
 
 ---
 
-By applying these styles, we've ensured that the product thumbnails look **consistent** and **well-designed** across all devices.
+By applying these styles, I've ensured that the product thumbnails look **consistent** and **well-designed** across all devices.
 
 ---
-
-Feel free to use this Markdown-formatted README to explain the changes to your dev team.
