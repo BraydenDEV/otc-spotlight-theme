@@ -3513,21 +3513,22 @@ details-disclosure>details {
     --border-offset: 0px;
     /* Prevent the border from growing on buttons when this effect is on. */
   }
+  .thumbnail-wrapper {
+    position: relative;
+  }
   .thumbnail-wrapper img {
     max-width: 100%;
     height: auto;
-    /* Added for product 8628300841282 Alt text display */
+    object-fit: contain;
   }
-
   .thumbnail-overlay-text {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #242833; /* 100% opaque with the color you specified */
     color: white;
     padding: 5px 10px;
     width: 100%;
     text-align: center;
-    /* Added for product 8628300841282 Alt text display */
   }
 }
