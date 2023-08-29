@@ -103,7 +103,7 @@
     </div>
     <div class="product__media media media--transparent">
         {%- liquid
-          if product.id == 8628300841282
+          if 'personalized-egg-variants' in product.tags
             assign show_thumbnail_overlay = true
           else
             assign show_thumbnail_overlay = false
