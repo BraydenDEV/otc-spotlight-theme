@@ -102,32 +102,34 @@
       </svg>
     </div>
     <div class="product__media media media--transparent">
-        {%- liquid
-          if 'personalized-egg-variants' in product.tags
+      {%- liquid
+        assign show_thumbnail_overlay = false
+        for tag in product.tags
+          if tag == 'personalized-egg-variants'
             assign show_thumbnail_overlay = true
-          else
-            assign show_thumbnail_overlay = false
+            break
           endif
-        -%}
-        
-        {%- if show_thumbnail_overlay -%}
-          <div class="thumbnail-wrapper">
-            {{ media.preview_image | image_url: width: 1946 | image_tag:
-              class: image_class,
-              loading: lazy,
-              sizes: sizes,
-              widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
-            }}
-            <div class="thumbnail-overlay-text">{{ media.alt }}</div>
-          </div>
-        {%- else -%}
+        endfor
+      -%}
+      
+      {%- if show_thumbnail_overlay -%}
+        <div class="thumbnail-wrapper">
           {{ media.preview_image | image_url: width: 1946 | image_tag:
             class: image_class,
             loading: lazy,
             sizes: sizes,
             widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
           }}
-        {%- endif -%}
+          <div class="thumbnail-overlay-text">{{ media.alt }}</div>
+        </div>
+      {%- else -%}
+        {{ media.preview_image | image_url: width: 1946 | image_tag:
+          class: image_class,
+          loading: lazy,
+          sizes: sizes,
+          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+        }}
+      {%- endif -%}
     </div>
     <button class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}" type="button" aria-haspopup="dialog" data-media-id="{{ media.id }}">
       <span class="visually-hidden">
